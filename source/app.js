@@ -13,11 +13,11 @@ app.use(express.json())
 
 routes(app);
 
-app.get('/tarefas', (req, res) => {    
-    tarefas.find((err, tarefas) => {        
-        res.status(200).json(tarefas);
-    })
-})
+// app.get('/tarefas', (req, res) => {    
+//     tarefas.find((err, tarefas) => {        
+//         res.status(200).json(tarefas);
+//     })
+// })
 
 
 app.get('/tarefas/:id', (req, res) => {
@@ -26,23 +26,23 @@ app.get('/tarefas/:id', (req, res) => {
     res.json(tarefas[index]);
 });
 
-app.post('/tarefas', (req, res) => {
-    tarefas.push(req.body);
-    res.status(201).send('Tarefa adcionada');
-})
+// app.post('/tarefas', (req, res) => {
+//     tarefas.push(req.body);
+//     res.status(201).send('Tarefa adcionada');
+// })
 
 
-app.put('/tarefas/:id', (req, res) => {
+// app.put('/tarefas/:id', (req, res) => {
 
-    const id = req.params.id; // Armazena o id da rota , exemplo tarefas/2 , então o valor do id será 2;
-    let index = buscaTarefa(id); // retorna o id 
-    tarefas[index].tarefa = req.body.tarefa; // Mensagem do corpo da requisição. 
-    // index seleciona o elemento da array '.tarefa' para atribuir ao campo tarefa. 
-    // req.body chega como um arquivo JSON , e  '.tarefa' se refere a espeficicamente a string do campo tarefa. 
+//     const id = req.params.id; // Armazena o id da rota , exemplo tarefas/2 , então o valor do id será 2;
+//     let index = buscaTarefa(id); // retorna o id 
+//     tarefas[index].tarefa = req.body.tarefa; // Mensagem do corpo da requisição. 
+//     // index seleciona o elemento da array '.tarefa' para atribuir ao campo tarefa. 
+//     // req.body chega como um arquivo JSON , e  '.tarefa' se refere a espeficicamente a string do campo tarefa. 
 
-    res.json(tarefas);
+//     res.json(tarefas);
 
-});
+// });
 
 
 app.delete('/tarefas/:id', (req, res) => {
