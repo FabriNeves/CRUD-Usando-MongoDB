@@ -3,6 +3,7 @@
 import express from "express";
 import db from "./config/mongoConection.js";
 import tarefas from "./models/Tarefas.js";
+import routes from "./routes/index.js";
 
 db.on("error", console.log.bind(console, "Erro de conexão...")); // bind = ligar , conectar.
 db.once("open", () => console.log("Conexão com o banco de dados estabelecida."));
@@ -10,35 +11,7 @@ db.once("open", () => console.log("Conexão com o banco de dados estabelecida.")
 const app = express();
 app.use(express.json())
 
-
-
-// const tarefas = [
-//     {
-//         id:1,
-//         "tarefa" : "Iniciar um Projeto"
-//     },
-//     {
-//         id:2,
-//         "tarefa" : "Programar todo dia"
-//     },
-//     {
-//         id:3,
-//         "tarefa" : "Criar um arquivo README.MD"
-//     },
-//     {
-//         id:4,
-//         "tarefa" : "Fazer commit todo dia"
-//     },
-//     {
-//         id:5,
-//         "tarefa" : "Se comprometer com o prazo"
-//     }
-
-// ]
-
-app.get('/', (req, res) => {
-    res.status(200).send('Lista de Tarefas');
-})
+routes(app);
 
 app.get('/tarefas', (req, res) => {    
     tarefas.find((err, tarefas) => {        
