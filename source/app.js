@@ -2,7 +2,6 @@
 // Blibliotecas Importadas
 import express from "express";
 import db from "./config/mongoConection.js";
-import tarefas from "./models/Tarefas.js";
 import routes from "./routes/index.js";
 
 db.on("error", console.log.bind(console, "Erro de conexão...")); // bind = ligar , conectar.
