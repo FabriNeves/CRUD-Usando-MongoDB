@@ -39,7 +39,7 @@ class tarefasController {
         //console.log(id);
         tarefas.findByIdAndUpdate(id, { $set: req.body }, (err) => {
             if (!err) {
-                res.status(200).send({ message: "Livro atualizado com sucesso" });
+                res.status(200).send({ message: "Tarefa atualizada com sucesso" });
             } else {                
                 res.status(500).send({ message: err.message });
 
@@ -53,7 +53,7 @@ class tarefasController {
             if(err) {
                 res.status(500).send({message:err.message});
             }else {
-                res.status(200).send({message:`Livro removido ${id}`});
+                res.status(200).send({message:`Tarefa removida ${id}`});
             }
         })
     }
