@@ -30,7 +30,7 @@ Exemplo : "mongodb+srv://Usuario:*password*@*Cluster*.xgrmd7m.mongodb.net/*Base-
 
 ## 📺 Preview 
 
-Para visualizar, excluir, inserir, alterar no bando de dados foi utilizado o programa [Postman](https://www.postman.com/).
+Para visualizar, excluir, inserir, alterar no banco de dados foi utilizado o programa [Postman](https://www.postman.com/).
 
 - Para vizualizar  utiliza-se verbo GET na rota http://localhost:3000/tarefas , tendo o retorno : 
 
