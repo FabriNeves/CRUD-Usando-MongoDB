@@ -26,11 +26,11 @@ Este é um projeto que consiste em um CRUD simples, construído com NodeJS e con
 
 ## 📗 MongoDB Atlas
 Após criar uma conta no MongoDB é preciso adcionar a String de conexão para o seu código esta String está dentro do arquivo config/mongoConection.js.
-Exemplo : "mongodb+srv://Usuario:<password>@<Cluster>.xgrmd7m.mongodb.net/<Base-de-Dados>".
+Exemplo : "mongodb+srv://Usuario:*password*@*Cluster*.xgrmd7m.mongodb.net/*Base-de-Dados*".
 
 ## 📺 Preview 
 
-Para visualizar, excluir, inserir, alterar no bando de dados foi utilizado o programa [Postman](https://www.postman.com/).
+Para visualizar, excluir, inserir, alterar no banco de dados foi utilizado o programa [Postman](https://www.postman.com/).
 
 - Para vizualizar  utiliza-se verbo GET na rota http://localhost:3000/tarefas , tendo o retorno : 
 
