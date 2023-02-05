@@ -34,12 +34,14 @@ Para visualizar, excluir, inserir, alterar no bando de dados foi utilizado o pro
 
 - Para vizualizar  utiliza-se verbo GET na rota http://localhost:3000/tarefas , tendo o retorno : 
 
-![metodo GET](./img/metodoGET.png | height=300)
+![metodo GET](./img/metodoGET.png)
 
 - Para excluir utiliza-se o verbo DELETE na rota http://localhost:3000/tarefas + ID , sendo  o ID o objeto que quer se deletar. 
 
 - Para atualizar utiliza-se o verbo PUT na rota http://localhost:3000/tarefas + ID.
 
+![metodo PUT](./img/metodoPUT.png)
+
 - Para excluir utiliza-se o verbo POST na rota http://localhost:3000/tarefas , sendo  o ID o objeto criado automaticamente pelo MongoDB.
 
-![metodo POST](./img/metodoPOST.png | height=300)
+![metodo POST](./img/metodoPOST.png)
